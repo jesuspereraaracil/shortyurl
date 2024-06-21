@@ -1,10 +1,9 @@
 import { sql } from '@vercel/postgres';
 import React from 'react';
 
-export default async function Cart({ params }: { params: { user: string } }): Promise<React.JSX.Element> {
+export default async function Cart(): Promise<React.JSX.Element> {
   const { rows } = await sql`SELECT *
-                             from CARTS
-                             where user_id = ${params.user}`;
+                             FROM CARTS`;
 
   return (
     <>
