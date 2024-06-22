@@ -10,9 +10,7 @@ export default async function Cart(): Promise<React.JSX.Element> {
       <div>TEST</div>
       <div>
         {rows.map((row) => (
-          <div key={row.id}>
-            {row.id} - {row.quantity}
-          </div>
+          <div key={row.id}>{row.id}</div>
         ))}
       </div>
     </>
